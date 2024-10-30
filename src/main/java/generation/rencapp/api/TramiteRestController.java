@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/tramites")
+@CrossOrigin("*")
 public class TramiteRestController {
 
     @Autowired
