@@ -1,21 +1,32 @@
 package generation.rencapp.models;
 
-
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Entity
-@Table(name = "vecinos")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Vecino {
+@DiscriminatorValue("VECINO")
+public class Vecino extends Usuario {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonProperty("_id")
-    private long id;
+    @Column (name = "direccion")
+
+    private String direccion;
+
+    private int numeroTelefono;
+
+    @Column()
+    private String numeroDeDocumento;
+
+    @Column ()//nullable=false
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private LocalDate fechaNacimiento;
+
+
 }

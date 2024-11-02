@@ -14,7 +14,7 @@ INSERT IGNORE INTO vecinos (id) VALUES
        (2);
 
 INSERT IGNORE INTO solicitudes (id,estado, tramite_id, vecino_id) VALUES
-       (1,"PAGADO", 1, 1),
+       (1,"FINALIZADO", 1, 1),
        (2,"FINALIZADO", 2, 1),
        (3,"EVALUADO", 2, 2),
        (4,"PENDIENTE", 1, 2),
