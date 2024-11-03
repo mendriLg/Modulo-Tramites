@@ -2,7 +2,9 @@ package generation.rencapp.api;
 import generation.rencapp.models.Servicio;
 import generation.rencapp.models.Solicitud;
 import generation.rencapp.models.Tramite;
+import generation.rencapp.security.JwtUtils;
 import generation.rencapp.services.ServicioService;
+import generation.rencapp.services.SolicitudService;
 import generation.rencapp.services.TramiteServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,8 +13,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/tramites")
 @CrossOrigin("*")
+@RequestMapping("/api/tramites")
 public class TramiteRestController {
 
     @Autowired
@@ -20,6 +22,7 @@ public class TramiteRestController {
 
     @Autowired
     private ServicioService servicioService;
+
 
     /** OBTENER LISTA DE TODOS LOS TRAMITES CREADOS **/
     //Clase ResponseEntity<List<Tramite>> permite manipular el status de la respuesta

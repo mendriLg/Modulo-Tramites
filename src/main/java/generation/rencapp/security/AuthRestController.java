@@ -4,6 +4,7 @@ import generation.rencapp.models.Funcionario;
 import generation.rencapp.models.TipoUsuario;
 import generation.rencapp.models.Usuario;
 import generation.rencapp.models.Vecino;
+import generation.rencapp.repositories.UsuarioRepository;
 import generation.rencapp.services.UsuarioServiceImpl;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,6 +26,7 @@ import org.springframework.web.bind.annotation.*;
 public class AuthRestController {
     private final AuthenticationManager authenticationManager;
     private final UsuarioServiceImpl usuarioService;
+    private final UsuarioUserDetailsServiceImpl usuarioUserDetailsService;
     private final PasswordEncoder passwordEncoder;
     private final JwtUtils jwtUtils;
 
