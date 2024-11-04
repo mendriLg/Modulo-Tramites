@@ -31,7 +31,7 @@ public class SolicitudRestController {
 
     /** OBTENER LISTA DE TODOS LAS SOLICITUDES CREADAS **/
     //Clase ResponseEntity<List<Tramite>> permite manipular el status de la respuesta
-    //Anotaciones para doumentar la descripción del método y sus estatus de respuesta
+    //Anotaciones para doumentar la descripción del metodo y sus estatus de respuesta
     @Operation(summary = "Obtiene lista de todas las solicitudes creadas")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Lista de todas las solicitudes, obtenidas exitosamente ", content = @Content(mediaType = "application/json", schema = @Schema(implementation = AuthRestController.JwtResponse.class))),
@@ -46,7 +46,7 @@ public class SolicitudRestController {
     }
 
 
-    //Anotaciones para doumentar la descripción del método y sus estatus de respuesta
+    //Anotaciones para doumentar la descripción del metodo y sus estatus de respuesta
     @Operation(summary = "Obtiene la lista de lista de solicitudes según la id del vecino")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Lista de solicitudes del usuario/vecino obtenida exitosamente", content = @Content(mediaType = "application/json", schema = @Schema(implementation = AuthRestController.JwtResponse.class))),
@@ -59,7 +59,7 @@ public class SolicitudRestController {
     }
 
 
-    //Anotaciones para doumentar la descripción del método y sus estatus de respuesta
+    //Anotaciones para doumentar la descripción del metodo y sus estatus de respuesta
     @Operation(summary = "Obtiene solicitudes por estado")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Muestra todos los estados de solicitudes creados", content = @Content(mediaType = "application/json", schema = @Schema(implementation = AuthRestController.JwtResponse.class))),
@@ -78,7 +78,7 @@ public class SolicitudRestController {
     //PUT es el metodo HTTP para trabajar con edición
     //ID de la solicitud va a ser la variable o criterio de búsqueda de la solicitud a editar
     //Va a recibir un objeto de tipo Solicitud con los campos editados
-    //Anotaciones para doumentar la descripción del método y sus estatus de respuesta
+    //Anotaciones para doumentar la descripción del metodo y sus estatus de respuesta
     @Operation(summary = "Edita el estado de la solicitud según su id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Edita exitosamente el estado de de una solicitud ya creada", content = @Content(mediaType = "application/json", schema = @Schema(implementation = AuthRestController.JwtResponse.class))),
@@ -96,7 +96,7 @@ public class SolicitudRestController {
     }
 
     /** CREAR NUEVA SOLICITUD PARA TRÁMITE CON EL ID DE TRÁMITE **/
-    //Anotaciones para doumentar la descripción del método y sus estatus de respuesta
+    //Anotaciones para doumentar la descripción del metodo y sus estatus de respuesta
     @Operation(summary = "Crea nueva solicitud para la plantilla del trámite con el id de tramite")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Crea nueva solicitud para la plantilla del trámite con el id de tramite exitosamente", content = @Content(mediaType = "application/json", schema = @Schema(implementation = AuthRestController.JwtResponse.class))),

@@ -32,7 +32,7 @@ public class TramiteRestController {
 
     /** OBTENER LISTA DE TODOS LOS TRAMITES CREADOS **/
     //Clase ResponseEntity<List<Tramite>> permite manipular el status de la respuesta
-    //Anotaciones para doumentar la descripción del método y sus estatus de respuesta
+    //Anotaciones para doumentar la descripción del metodo y sus estatus de respuesta
     @Operation(summary = "Obtiene lista de todos los trámites creados")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Lista de todas las plantillas de tramites creadas exitososamente", content = @Content(mediaType = "application/json", schema = @Schema(implementation = AuthRestController.JwtResponse.class))),
@@ -49,7 +49,7 @@ public class TramiteRestController {
     /** OBTENER TRAMITE POR ID **/
     //Al no conocer el tipo de dato que se va a retornar podemos indicar que se retorna un responseEntity<?>
     //@PathVariable = localhost/api/horarios/5
-    //Anotaciones para doumentar la descripción del método y sus estatus de respuesta
+    //Anotaciones para doumentar la descripción del metodo y sus estatus de respuesta
     @Operation(summary = "Obtiene trámite por id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Muestra la plantilla de trámite según id exitosamente", content = @Content(mediaType = "application/json", schema = @Schema(implementation = AuthRestController.JwtResponse.class))),
@@ -64,7 +64,7 @@ public class TramiteRestController {
     //DELETE es el metodo HTTP que me permite eliminar registros
     //ID del trámite va a ser el atributo por el que voy a filtrar
     //Vamos a recibir un dato de tipo Long que es el ID a través de la ruta
-    //Anotaciones para doumentar la descripción del método y sus estatus de respuesta
+    //Anotaciones para doumentar la descripción del metodo y sus estatus de respuesta
     @Operation(summary = "Elimina trámite por id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Elimina plantilla de tramite según id exitosamente", content = @Content(mediaType = "application/json", schema = @Schema(implementation = AuthRestController.JwtResponse.class))),
@@ -79,7 +79,7 @@ public class TramiteRestController {
     }
 
     /** CREAR NUEVO TRAMITE PARA SERVICIO CON EL ID DE SERVICIO **/
-    //Anotaciones para doumentar la descripción del método y sus estatus de respuesta
+    //Anotaciones para doumentar la descripción del metodo y sus estatus de respuesta
     @Operation(summary = "Crea nuevo trámite para el servicio con el id del servicio")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Crea nuevo plantilla de trámite para el servicio con el id del servicio exitosamente", content = @Content(mediaType = "application/json", schema = @Schema(implementation = AuthRestController.JwtResponse.class))),
@@ -98,7 +98,7 @@ public class TramiteRestController {
     }
 
 
-    //Anotaciones para doumentar la descripción del método y sus estatus de respuesta
+    //Anotaciones para doumentar la descripción del metodo y sus estatus de respuesta
     @Operation(summary = "Modidificar el trámite según id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Modidifica la plantilla del trámite según id exitosamente", content = @Content(mediaType = "application/json", schema = @Schema(implementation = AuthRestController.JwtResponse.class))),
