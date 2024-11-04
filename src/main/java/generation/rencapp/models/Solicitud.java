@@ -52,7 +52,8 @@ public class Solicitud {
     @JoinColumn(name = "vecino_id")
     private Vecino vecino;
 
-    @JsonManagedReference
+
+
     @ManyToOne
     @JoinColumn(name = "tramite_id")
     private Tramite tramite;

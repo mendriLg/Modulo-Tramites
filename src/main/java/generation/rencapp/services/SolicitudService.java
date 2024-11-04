@@ -22,7 +22,7 @@ public interface SolicitudService {
     List<Solicitud> findByFechaCreacion(LocalDate fecha);
 
     // Metodo para buscar solicitud por el vecinoId
-    List<Solicitud> findByVecinoId(Vecino vecino);
+    List<Solicitud> findByVecinoId(Long vecino);
 
     // Metodo para buscar solicitudes por estado
     List<Solicitud> findByEstado(String estado);

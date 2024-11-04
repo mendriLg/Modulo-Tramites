@@ -70,9 +70,10 @@ public class SolicitudServiceImpl implements SolicitudService {
     }
 
     @Override
-    public List<Solicitud> findByVecinoId(Vecino vecino) {
-        return List.of();
+    public List<Solicitud> findByVecinoId(Long vecinoId) {
+        return solicitudRepository.findByVecinoId(vecinoId);
     }
+
 
     /*// Metodo para borrar solicitud por id
     @Override

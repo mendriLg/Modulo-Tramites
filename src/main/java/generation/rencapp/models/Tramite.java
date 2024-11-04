@@ -73,7 +73,7 @@ public class Tramite {
     @JoinColumn(name = "servicio_id")
     private Servicio servicio;
 
-    @JsonBackReference
+    @JsonIgnore
     @OneToMany(mappedBy = "tramite", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Solicitud> solicitudes;
 

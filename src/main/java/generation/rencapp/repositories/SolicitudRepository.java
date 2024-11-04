@@ -25,4 +25,6 @@ public interface SolicitudRepository extends JpaRepository<Solicitud, Long> {
     // Metodo para buscar solicitud por fechaCreación
     List<Solicitud> findByCreatedAt(LocalDate fecha);
 
+
+    List<Solicitud> findByVecinoId(Long vecinoId);
 }
